@@ -1,6 +1,14 @@
-Sinatraは試したがうまく動かず。stdinのほうだけ。
+## Setup (for SSE)
 
-## Setup
+```
+bundle install
+bundle exec ridgepole -c config/database.yml -E development --apply
+bundle exec rackup -p 3000
+```
+
+and specify `http://localhost:3000/mcp/sse` for MCP SSE endpoint.
+
+## Setup (for STDIN)
 
 ### build
 
@@ -33,7 +41,6 @@ docker build -t fast-mcp-sinatra-playground .
   }
 }
 ```
-
 
 ## いざ
 
@@ -1573,7 +1580,7 @@ tenki.jpのページに移動しました。ここから今日の天気情報を
 何か他にお手伝いできることはありますか？
 </pre>
 
-> 個人メモに「あいうえお」など意味のない文字列を3回書き込んでください
+> 個人メモに「あいうえお」など意味のない文字列を 3 回書き込んでください
 
 <pre>
 了解しました。個人メモに「あいうえお」という文字列を3回書き込みます。oreore-memo（ローカル）からのPostMemoの結果を表示{

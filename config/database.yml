@@ -1,0 +1,9 @@
+development:
+  adapter: sqlite3
+  timeout: 5000
+  database: storage/development.sqlite3
+
+test:
+  adapter: sqlite3
+  timeout: 5000
+  database: storage/test.sqlite3
